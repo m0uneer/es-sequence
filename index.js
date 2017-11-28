@@ -22,7 +22,6 @@ var _client,
       esTypeMapping: {
         _source : { enabled : false },
         _all    : { enabled : false },
-        // _type   : { index : 'no' },
         enabled : false
       }
     };
@@ -58,7 +57,6 @@ function addMappingToEsIndexIfMissing() {
   return _client.indices.putMapping({
     index: _options.esIndex,
     type: _options.esType,
-    // ignore_conflicts: true,
     body: mapping
   });
 
